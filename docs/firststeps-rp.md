@@ -20,7 +20,7 @@ Recreate affected containers by running `docker-compose up -d`.
     The script `generate_config.sh` copies snake-oil certificates to the correct location, so the services will not fail to start due to missing files.
 
 !!! info
-    Using the site configs below will **forward ACME requests to mailcow** and let it handle certificates itself.
+    Using the site configs below will **forward ACME requests to openemail** and let it handle certificates itself.
     The downside of using mailcow as ACME client behind a reverse proxy is, that you will need to reload your webserver after acme-mailcow changed/renewed/created the certificate. You can either reload your webserver daily or write a script to watch the file for changes.
     On many servers logrotate will reload the webserver daily anyway.
 
